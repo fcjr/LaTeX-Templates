@@ -1,0 +1,33 @@
+% !TEX TS-program = arara
+% arara: pdflatex
+% arara: bibtex
+% arara: pdflatex
+% arara: pdflatex
+
+% Paper/Font Information
+\documentclass[10pt,letterpaper,oneside]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{palatino}
+
+% Spacing
+\usepackage{setspace}
+\linespread{2.0}
+%\doublespacing
+
+%Citations
+\usepackage[backend=bibtex]{biblatex}
+\usepackage{hyperref}
+\bibliography{citations}
+
+% Document Start
+\begin{document}
+\title{TITLE GOES HERE}
+\author{Frank Chiarulli Jr.}
+\date{\today}
+\maketitle
+
+PAPER GOES HERE
+
+% Print References and end document
+\printbibliography
+\end{document}
