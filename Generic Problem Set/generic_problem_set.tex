@@ -1,0 +1,51 @@
+% !TEX TS-program = arara
+% arara: pdflatex
+% arara: bibtex
+% arara: pdflatex
+% arara: pdflatex
+
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+
+%defines \todo command
+\newcommand{\todo}[1]{\textbf{*TODO* #1 *TODO*}}
+
+%defines the problem environment and it's components
+\newcounter{problemcount}
+\setcounter{problemcount}{0}
+\newenvironment{problem}
+{% This is the begin code
+\noindent\stepcounter{problemcount}\textbf{\textsc{Problem} \arabic{problemcount}:}
+}
+{% This is the end code
+
+\vspace*{2ex}
+\noindent\textbf{\textsc{Answer:}}
+}
+
+\begin{document}
+
+\title{Problem Set Title}
+\author{Frank Chiarulli Jr.}
+\date{\today}
+\maketitle
+
+
+%Problem 1
+\begin{problem}
+Question 1
+\end{problem}
+
+
+% Answer to Problem 1
+\begin{enumerate}
+\item 
+\todo{Answer 1}
+\item
+\todo{Answer 2}
+\item
+\todo{Answer 3}
+ \end{enumerate}
+
+
+\end{document}
